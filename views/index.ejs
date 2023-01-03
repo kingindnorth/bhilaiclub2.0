@@ -1,59 +1,4 @@
-    <!-- page Navigation -->
-    <nav class="navbar custom-navbar navbar-expand-md navbar-light fixed-top" data-spy="affix" data-offset-top="10">
-        <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="img/logo.svg" alt="">
-            </a>
-            <button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ml-auto"> 
-                    <% if (isAuthenticated) { %>                    
-                    <li class="nav-item">
-                        <a class="nav-link" href="#service">Service</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#booking">Booking</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="auth/logout">Logout</a>
-                    </li>
-                    <% } else { %>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#service">Service</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About Us</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#portfolio">Gallery</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="register">Register</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login">Login</a>
-                        </li>
-                    <% } %>    
-
-                </ul>
-            </div>
-        </div>
-    </nav>
-    <!-- End Of Second Navigation -->
+<%- include('partials/partials.ejs') %>
 
     <!-- Page Header -->
     <header class="header">
@@ -399,7 +344,7 @@
                         <div class="card-body">                         
                             <h6 class="card-title">Blue Room</h6>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -409,7 +354,7 @@
                         <div class="card-body">                         
                             <h6 class="card-title">Orange Room</h5>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -419,7 +364,7 @@
                         <div class="card-body">                         
                             <h6 class="card-title">New Dinning Hall</h5>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
@@ -429,28 +374,28 @@
                         <div class="card-body">                         
                             <h6 class="card-title">Madhubani Hall</h5>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"> 
                     <div class="card border-0 mb-4">
                         <img src="img/royalC.jpg" alt="" class="card-img-top w-100">
                         <div class="card-body">                         
                             <h6 class="card-title">Royal Crystal - Lawn</h5>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
                 
                 <div class="col-md-4">
                     <div class="card border-0 mb-4">
-                        <img src="img/web-2.jpg" alt="" class="card-img-top w-100">
+                        <img src="img/meeting.jpg" alt="" class="card-img-top w-100">
                         <div class="card-body">                         
                             <h6 class="card-title">Royal Court - Lawn</h6>
                             <p>Fuga quae ratione inventore Perferendis porro.</p>
-                            <a href="javascript:void(0)" class="small text-muted">Book Now</a>
+                            <a href="javascript:void(0)" class="btn btn-block btn-primary">Book Now</a>
                         </div>
                     </div>
                 </div>
