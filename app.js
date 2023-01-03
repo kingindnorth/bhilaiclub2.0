@@ -45,6 +45,6 @@ app.listen(PORT,()=>{
     connect()
     console.log(`
     server started on port: ${PORT} 
-    link: http://localhost:${PORT}/auth/google
+    link: http://localhost:${PORT}/
     `);
 })

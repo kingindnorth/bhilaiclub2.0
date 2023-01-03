@@ -16,7 +16,20 @@ const getRegister = (req,res) => {
     }
 }
 
+const getIndex = (req,res) => {
+    try{
+        res.render("index",{
+            isAuthenticated:req.isAuthenticated()
+        })
+    }catch(err){
+        console.log(err)
+        res.render("error/500")
+    }
+
+}
+
 module.exports = {
     getLogin,
-    getRegister
+    getRegister,
+    getIndex
 }

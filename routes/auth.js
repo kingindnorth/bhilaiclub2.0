@@ -1,6 +1,7 @@
 const router = require("express").Router()
 const passport = require("passport")
 
+const { ensureAuthenticated, ensureLogin} = require("../utils/auth")
 const {
     postLogin,
     postRegister,
@@ -12,10 +13,10 @@ router.post("/login",postLogin)
 router.post("/register",postRegister)
 
 //google login
-router.get("/google",passport.authenticate('google', { scope: ['profile'] }))
-router.get("/google/callback",passport.authenticate('google', { failureRedirect: '/' }),
+router.get("/google",ensureLogin,passport.authenticate('google', { scope: ['profile'] }))
+router.get("/google/callback",ensureLogin,passport.authenticate('google', { failureRedirect: '/login' }),
     (req,res)=>{
-        res.redirect("/users")
+        res.redirect("/")
 })
 
 //logout

@@ -11189,11 +11189,11 @@ textarea.form-control {
 }
 
 .navbar.navbar-dark .navbar-brand {
-  color: #fff;
+  color: #000;
 }
 
 .navbar.navbar-light .navbar-brand {
-  color: #1b1b1b;
+  color: #000;
 }
 
 .navbar .navbar-brand img {
@@ -11216,7 +11216,7 @@ textarea.form-control {
 }
 
 .navbar.custom-navbar .nav-link:hover {
-  color: #fff;
+  color: orange !important;
 }
 
 .navbar.custom-navbar.affix {
