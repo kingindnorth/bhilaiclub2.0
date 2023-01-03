@@ -2,6 +2,7 @@ const express = require("express")
 const expLayout = require("express-ejs-layouts")
 const passport = require("passport")
 const session = require("express-session")
+const flash = require("connect-flash")
 const ejs = require("ejs")
 const connect = require("./utils/db")
 require("dotenv").config()
@@ -33,11 +34,19 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
+//flash
+app.use(flash())
+
 //routes
 app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
 app.use("/users",require("./routes/user"))
 app.use("/admin",require("./routes/admin"))
+
+//handling wrong urls
+app.use((req,res) => { 
+  res.status(404).render('error/404'); 
+});
 
 const PORT = process.env.PORT || 1001
 
