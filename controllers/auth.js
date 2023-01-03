@@ -1,13 +1,3 @@
-const passport = require("passport")
-
-const getLogin = (req,res) => {
-
-}
-
-const getRegister = (req,res) => {
-
-}
-
 const postLogin = (req,res) => {
 
 }
@@ -24,8 +14,6 @@ const logout = (req,res,next) => {
 }
 
 module.exports = {
-    getLogin,
-    getRegister,
     postLogin,
     postRegister,
     logout,

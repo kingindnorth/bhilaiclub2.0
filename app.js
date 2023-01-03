@@ -34,12 +34,12 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 //routes
-// app.use("/")
+app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
 app.use("/users",require("./routes/user"))
 app.use("/admin",require("./routes/admin"))
 
-const PORT = process.env.PORT || 1000
+const PORT = process.env.PORT || 1001
 
 app.listen(PORT,()=>{
     connect()
