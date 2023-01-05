@@ -1,12 +1,16 @@
 const bcrypt = require("bcryptjs")
+const passport = require("passport")
 const User = require("../models/User")
 
-const postLogin = (req,res) => {
-
+const postLogin = async(req,res,next) => {
+    passport.authenticate('local', {
+        successRedirect: '/',
+        failureRedirect: '/login',
+        failureFlash: true
+      })(req, res, next);
 }
 
 const postRegister = async(req,res) => {
-    console.log("ami working");
     const errors = []
     try{
         const {

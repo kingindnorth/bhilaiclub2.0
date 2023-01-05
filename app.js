@@ -7,6 +7,7 @@ const ejs = require("ejs")
 const connect = require("./utils/db")
 require("dotenv").config()
 require("./utils/googleStrategy")(passport)
+require("./utils/localStrategy")(passport)
 
 const app = express()
 
