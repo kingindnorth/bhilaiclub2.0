@@ -1,11 +1,11 @@
 const router = require("express").Router()
 
-const { ensureAuthenticated, ensureLogin } = require("../utils/auth")
+const { ensureLogin } = require("../utils/auth")
 
 const {
     getLogin,
     getRegister,
-    getIndex
+    getIndex,
 } = require("../controllers/index")
 
 router.get("/",getIndex)
