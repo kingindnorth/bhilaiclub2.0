@@ -5,7 +5,8 @@ const getRoom = async(req,res) => {
         const param = req.params.id
         const room = await Room.findById(param)
         res.render("booking",{
-            isAuthenticated:req.isAuthenticated()
+            isAuthenticated:req.isAuthenticated(),
+            room
         })
 
     }catch(err){
