@@ -41,8 +41,6 @@ app.use(flash())
 //routes
 app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
-app.use("/users",require("./routes/user"))
-app.use("/admin",require("./routes/admin"))
 
 //handling wrong urls
 app.use((req,res) => { 
