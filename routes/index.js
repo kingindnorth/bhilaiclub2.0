@@ -1,6 +1,6 @@
 const router = require("express").Router()
 
-const { ensureLogin } = require("../utils/auth")
+const { ensureLogin, ensureAuthenticated} = require("../utils/auth")
 
 const {
     getLogin,
@@ -8,8 +8,16 @@ const {
     getIndex,
 } = require("../controllers/index")
 
+const {
+    getRoom,
+    bookRoom
+} = require("../controllers/booking")
+
 router.get("/",getIndex)
 router.get("/login",ensureLogin,getLogin)
 router.get("/register",ensureLogin,getRegister)
+router.get("/:id",ensureAuthenticated,getRoom)
+router.post("/booking/:id",bookRoom)
+
 
 module.exports = router

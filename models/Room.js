@@ -5,9 +5,12 @@ const RoomSchema = new mongoose.Schema({
         type:String,
         required:true
     },
-    desciption:{
+    desc:{
         type:String,
         required:true
+    },
+    image:{
+        type:String
     },
     isBooked:{
         type:Boolean,

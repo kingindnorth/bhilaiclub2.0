@@ -1,3 +1,5 @@
+const Room = require("../models/Room")
+
 const getLogin = (req,res) => {
     try{
         res.render("login")
@@ -16,10 +18,12 @@ const getRegister = (req,res) => {
     }
 }
 
-const getIndex = (req,res) => {
+const getIndex = async(req,res) => {
     try{
+        const rooms = await Room.find()
         res.render("index",{
-            isAuthenticated:req.isAuthenticated()
+            isAuthenticated:req.isAuthenticated(),
+            rooms
         })
     }catch(err){
         console.log(err)
