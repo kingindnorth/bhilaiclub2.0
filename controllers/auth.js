@@ -40,7 +40,7 @@ const postRegister = async(req,res) => {
 
         if(password!==password2){
             errors.push({msg:"password does not match"})
-            return res.status(400).render("register",{
+            return res.status(400).render("register" + {
                 errors,
                 name,
                 email
@@ -57,7 +57,7 @@ const postRegister = async(req,res) => {
         })
 
         await newUser.save()
-        // req.flash('success_msg','you are now registered')
+        req.flash('success_msg','you are now registered')
         res.redirect("/login")
 
     }catch(err){

@@ -38,6 +38,12 @@ app.use(passport.session());
 //flash
 app.use(flash())
 
+//set global variables
+app.use(function(req,res,next){
+  res.locals.success_msg = req.flash("success_msg")
+  next()
+})
+
 //routes
 app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
