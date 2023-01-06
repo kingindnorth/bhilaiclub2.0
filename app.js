@@ -47,12 +47,7 @@ app.use(function(req,res,next){
 //routes
 app.use("/",require("./routes/index"))
 app.use("/auth",require("./routes/auth"))
-// app.use("/booking",require("./routes/booking"))
-
-//handling wrong urls
-app.use((req,res) => { 
-  res.status(404).render('error/404'); 
-});
+app.use("/checkAvailability",require("./routes/availability"))
 
 const PORT = process.env.PORT || 1001
 

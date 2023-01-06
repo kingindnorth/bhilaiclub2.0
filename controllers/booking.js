@@ -3,7 +3,7 @@ const Room = require("../models/Room")
 const getRoom = async(req,res) => {
     try{
         const param = req.params.id
-        const room = await Room.findById(param)
+        const room = await Room.findOne({param})
         res.render("booking",{
             isAuthenticated:req.isAuthenticated(),
             room

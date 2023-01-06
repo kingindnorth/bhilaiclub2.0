@@ -18,27 +18,27 @@
 					</div>
 					<div class="col-md-4 col-md-pull-7">
 						<div class="booking-form">
-							<form>
+							<form action="/checkAvailability" method="post">
 								<div class="form-group">
 									<span class="form-label">Reason Of Booking</span>
-									<input class="form-control" type="text" placeholder="Enter your reason for booking">
+									<input class="form-control" type="text" placeholder="Enter your reason for booking" name="ROB">
 								</div>
 								<div class="row">
 									<div class="col-sm-6">
 										<div class="form-group">
 											<span class="form-label">Check In</span>
-											<input class="form-control" type="date" required>
+											<input class="form-control" type="date" name="checkIN">
 										</div>
 									</div>
 									<div class="col-sm-6">
 										<div class="form-group">
 											<span class="form-label">Check out</span>
-											<input class="form-control" type="date" required>
+											<input class="form-control" type="date" name="checkOUT">
 										</div>
 									</div>
 								</div>
 								<div class="form-btn">
-									<button class="submit-btn">Check availability</button>
+									<button type="submit" class="submit-btn">Check availability</button>
 								</div>
 							</form>
 						</div>
