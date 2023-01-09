@@ -1,5 +1,3 @@
-const Room = require("../models/Room")
-
 const getLogin = (req,res) => {
     try{
         res.render("login")
@@ -20,10 +18,8 @@ const getRegister = (req,res) => {
 
 const getIndex = async(req,res) => {
     try{
-        const rooms = await Room.find()
         res.render("index",{
-            isAuthenticated:req.isAuthenticated(),
-            rooms
+            isAuthenticated:req.isAuthenticated()
         })
     }catch(err){
         console.log(err)
@@ -33,7 +29,5 @@ const getIndex = async(req,res) => {
 }
 
 module.exports = {
-    getLogin,
-    getRegister,
     getIndex
 }

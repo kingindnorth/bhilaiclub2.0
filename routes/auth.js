@@ -2,6 +2,7 @@ const router = require("express").Router()
 const passport = require("passport")
 
 const { ensureLogin} = require("../utils/auth")
+
 const {
     logout
 } = require("../controllers/auth")

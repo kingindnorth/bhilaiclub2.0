@@ -9,8 +9,6 @@ const checkAvailability = async(req,res) => {
         } = req.body
 
         const rooms = await Room.find()
-        console.log(rooms);
-
         res.render("rooms",{
             isAuthenticated:req.isAuthenticated(),
             rooms
