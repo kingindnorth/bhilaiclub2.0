@@ -1,16 +1,10 @@
 const router = require("express").Router()
 const passport = require("passport")
 
-const { ensureAuthenticated, ensureLogin} = require("../utils/auth")
+const { ensureLogin} = require("../utils/auth")
 const {
-    postLogin,
-    postRegister,
     logout
 } = require("../controllers/auth")
-
-//submit form
-router.post("/login",postLogin)
-router.post("/register",postRegister)
 
 //google login
 router.get("/google",ensureLogin,passport.authenticate('google', { scope: ['profile'] }))

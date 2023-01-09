@@ -74,7 +74,5 @@ const logout = (req,res,next) => {
 }
 
 module.exports = {
-    postLogin,
-    postRegister,
     logout,
 }
