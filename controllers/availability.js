@@ -8,7 +8,24 @@ const checkAvailability = async(req,res) => {
             checkOUT
         } = req.body
 
-        const rooms = await Room.find()
+        const date1 = new Date(checkIN)
+        const date2 = new Date(checkOUT)
+        const dateArray = new Array
+
+        Date.prototype.addDays = function(days) {
+            var date = new Date(this.valueOf());
+            date.setDate(date.getDate() + days);
+            return date;
+        }
+
+        let currentDate = date1
+        while(currentDate <= date2){
+            dateArray.push(new Date(currentDate))
+            currentDate = currentDate.addDays(1)
+        }
+
+        const rooms = await Room.find({isBooked:false})
+
         res.render("rooms",{
             isAuthenticated:req.isAuthenticated(),
             rooms
