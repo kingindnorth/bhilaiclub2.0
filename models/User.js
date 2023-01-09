@@ -10,14 +10,15 @@ const UserSchema = new mongoose.Schema({
     lastName:{
         type:String
     },
-    email:{
-        type:String
-    },
-    password:{
-        type:String
-    },
     image:{
         type:String
+    },
+    myBookings:{
+        type:Array,
+        roomID:{
+            type:String
+        },
+        date:[Date]
     },
     createdAt:{
         type:Date,

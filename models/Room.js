@@ -12,15 +12,7 @@ const RoomSchema = new mongoose.Schema({
     image:{
         type:String
     },
-    isBooked:{
-        type:Boolean,
-        default:false
-    },
-    user:{
-        required:false,
-        type:mongoose.Schema.Types.ObjectId,
-        ref:"User"
-    },
+    bookedDates:[Date],
     createdAt:{
         type:Date,
         default:Date.now
