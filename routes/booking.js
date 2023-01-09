@@ -2,9 +2,11 @@ const router = require("express").Router()
 
 const {
     getRoom,
-    bookRoom
+    bookRoom,
+    getBooking
 } = require("../controllers/booking")
 
+router.get("/",getBooking)
 router.get("/:id",getRoom)
 router.post("/:id",bookRoom)
 

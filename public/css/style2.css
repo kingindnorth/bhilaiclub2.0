@@ -14,6 +14,7 @@
 
 #booking {
 	font-family: 'Montserrat', sans-serif;
+	background-image: url(../img/hero.jpg);
 	background-size: cover;
 	background-position: center;
 }
@@ -127,11 +128,11 @@
 .booking-cta h1 {
 	font-size: 52px;
 	text-transform: uppercase;
-	color: #fff;
+	color: rgb(215, 135, 24);
 	font-weight: 700;
 }
 
 .booking-cta p {
 	font-size: 16px;
-	color: rgba(255, 255, 255, 0.8);
+	color: rgba(210, 125, 21, 0.8);
 }

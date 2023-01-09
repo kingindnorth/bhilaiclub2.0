@@ -1,3 +1,5 @@
+const Room = require("../models/Room")
+
 const checkAvailability = async(req,res) => {
     try{
         const {
@@ -5,8 +7,15 @@ const checkAvailability = async(req,res) => {
             checkIN,
             checkOUT
         } = req.body
-        pass 
-        
+
+        const rooms = await Room.find()
+        console.log(rooms);
+
+        res.render("rooms",{
+            isAuthenticated:req.isAuthenticated(),
+            rooms
+        })
+
     }catch(err){
         console.log(err)
         res.status(500).render("error/500")

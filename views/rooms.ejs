@@ -1,0 +1,25 @@
+<%- include('partials/nav2.ejs') %>
+    <!-- Booking Section -->
+    <% if (isAuthenticated) {%>
+        <section class="section" id="booking">
+            <div class="container">
+                <h6 class="section-title mb-0 text-center">Book Now</h6>
+                <h6 class="section-subtitle mb-5 text-center">Book from the best available halls and garden at affordable rates</h6>
+                <div class="row">
+                <% rooms.forEach(room =>{  %>
+                <div class="col-md-4">
+                    <div class="card border-0 mb-4">
+                        <img src= <%= room.image %> alt="" class="card-img-top w-100">
+                        <div class="card-body">                         
+                            <h6 class="card-title"> <%= room.title%> </h6>
+                            <p> <%= room.desc %> </p>
+                            <a href= <%= "/" + room.id%> class="btn btn-block btn-primary">Book Now</a>
+                        </div>
+                    </div>
+                </div>
+                <% }) %>    
+            </div>    
+        </div>
+    </section>
+    <% } %>
+    <!-- End of Booking Section -->
